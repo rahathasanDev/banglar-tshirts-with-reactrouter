@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Tshirtdata from './Tshirtdata';
 import '../Style/Home.css'
+import Cart from './Cart';
 
 const Home = () => {
   const tshirtsdata = useLoaderData();
@@ -14,6 +15,8 @@ const Home = () => {
 
         </Tshirtdata>)
       }</div>
+    
+     <Cart></Cart>
     </div>
   );
 };

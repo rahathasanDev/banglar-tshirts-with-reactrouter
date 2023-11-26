@@ -7,8 +7,10 @@ import Cart from './Cart';
 const Home = () => {
   const tshirtsdata = useLoaderData();
   const [cart,setCart]=useState([]);
+
    const handleAddToCart =tshirts=>{
-    console.log(tshirts);
+    const newCart = [...cart,tshirts];
+    setCart(newCart);
    }
   return (
     <div className='home-container'>
@@ -21,7 +23,7 @@ const Home = () => {
         </Tshirtdata>)
       }</div>
     
-     <Cart></Cart>
+     <Cart cart={cart}></Cart>
     </div>
   );
 };

@@ -11,7 +11,7 @@ import React from 'react';
 //   </Tshirtdata>)
 //  }>>>UseLoaderData 
 
-const Tshirtdata = ({ tshirts }) => {
+const Tshirtdata = ({ tshirts,handleAddToCart }) => {
   const { picture, name, price } = tshirts;
   return (
     <div className='mt-2'>
@@ -19,7 +19,7 @@ const Tshirtdata = ({ tshirts }) => {
         <img className='place-items-center w-64 h-64 rounded-lg p-1' src={picture} alt="" />
         <h2 className='font-mono'>{name}</h2>
         <p className='text-2xl font-bold'>${price}</p>
-        <button className=''>Buy Now</button>
+        <button onClick={()=>handleAddToCart(tshirts)} className=''>Buy Now</button>
 
       </div>
       
